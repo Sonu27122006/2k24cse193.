@@ -1,0 +1,20 @@
+
+#include <stdio.h>
+int main(){
+int r;
+scanf("%d",&r);
+int a[r][12];
+for(int i=0;i<r;i++)
+for(int j=0;j<12;j++)
+scanf("%d",&a[i][j]);
+int max=0;
+for(int j=0;j<12;j++){
+int sum=0;
+for(int i=0;i<r;i++)
+sum+=a[i][j];
+int avg=sum/r;
+if(avg>max)max=avg;
+}
+printf("%d",max);
+return 0;
+}
